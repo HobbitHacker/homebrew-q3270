@@ -1,9 +1,9 @@
 class Q3270 < Formula
   desc "Qt-based 3270 Terminal Emulator"
-  homepage "https://github.com/your-username/Q3270"
+  homepage "https://github.com/hobbithacker/Q3270"
   # You will update this URL and SHA whenever you release a new version
-  url "https://github.com/your-username/Q3270/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "run_shasum_a256_on_your_tarball_and_paste_here"
+  url "https://github.com/hobbithacker/Q3270/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "1799b36699358383cadee540cd3dfc8b5cc2eb674567c232e074d661e98f3ee8"
 
   depends_on "cmake" => :build
   depends_on "qt@5"
