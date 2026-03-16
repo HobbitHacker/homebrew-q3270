@@ -15,7 +15,7 @@ class Q3270 < Formula
     mkdir "build" do
       system "cmake", "..", *std_cmake_args,
              "-DCMAKE_PREFIX_PATH=#{qt5}",
-             "-DCMAKE_OSX_ARCHITECTURES=#{Hardware::CPU.arch}" # Native M4 detection
+             "-DCMAKE_OSX_ARCHITECTURES=x86_64;arm64"
       system "make", "-j#{ENV.make_jobs}"
       
       # Install the bundle into the Homebrew prefix
