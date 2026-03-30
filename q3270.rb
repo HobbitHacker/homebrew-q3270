@@ -12,10 +12,13 @@ class Q3270 < Formula
     # Homebrew versions of Qt5 are 'keg-only', so we must point CMake to them
     qt5 = Formula["qt@5"].opt_prefix
     
+    # Detect if we are on Intel or ARM
+    arch = Hardware::CPU.arm? ? "arm64" : "x86_64"
+    
     mkdir "build" do
       system "cmake", "..", *std_cmake_args,
              "-DCMAKE_PREFIX_PATH=#{qt5}",
-             "-DCMAKE_OSX_ARCHITECTURES=x86_64;arm64"
+             "-DCMAKE_OSX_ARCHITECTURES=#{arch}" # <--- Use the detected arch
       system "make", "-j#{ENV.make_jobs}"
       
       # Install the bundle into the Homebrew prefix
