@@ -3,7 +3,7 @@ class Q3270 < Formula
   homepage "https://github.com/hobbithacker/Q3270"
   # You will update this URL and SHA whenever you release a new version
   url "https://github.com/HobbitHacker/Q3270/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "b62625dfca34da499fd0481b761029fc4c67268d1f1a6cf96f220ed8a7bf0d9e"
+  sha256 "1d2058af95e62bc494b444b9ec71abac731fd6a7647a704213527dffeadd3b1a"
 
   depends_on "cmake" => :build
   depends_on "qt@5"
